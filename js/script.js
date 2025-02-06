@@ -3,6 +3,8 @@ var screenContent = "";
 var lastOpeeration = "";
 
 function appendScreen(char) {
+  if(lastOpeeration=="Error")
+    return;
   screenContent += char;
   screen.innerHTML = screenContent;
   lastOpeeration = "appendScreen";
@@ -37,6 +39,7 @@ function calculate() {
     lastOpeeration = "calculate";
     screenContent = eval(screenContent);
     screen.innerHTML = screenContent;
+    if(screenContent=="Error")lastOpeeration="Error";
   } catch (e) {
     lastOpeeration = "Error";
     screenContent = "Error";
