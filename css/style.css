@@ -51,7 +51,7 @@ body {
 }
 
 .container .btn[onclick="appendScreen('/')"],
-.container .btn[onclick="appendScreen('*')"],
+.container .btn[onclick="appendScreen('x')"],
 .container .btn[onclick="appendScreen('-')"],
 .container .btn[onclick="appendScreen('+')"],
 .container .btn[onclick="calculate()"] {
