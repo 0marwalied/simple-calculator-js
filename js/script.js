@@ -30,6 +30,8 @@ function clearScreen() {
 
 function calculate() {
   try {
+    screenContent = screenContent.replace('x', '*');
+    console.log(screenContent);
     lastOpeeration = "calculate";
     screenContent = eval(screenContent);
     screen.innerHTML = screenContent;
